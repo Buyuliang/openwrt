@@ -79,12 +79,17 @@
 
 	port@5 {
 		status = "okay";
-		phy-handle = <&phy5>;
+		phy-handle = <&phy1>;
 		phy-mode = "rgmii";
 	};
 
 	mdio-bus {
 		status = "okay";
+
+		phy1: ethernet-phy@1 {
+			reg = <1>;
+			phy-mode = "rgmii";
+		};
 
 		phy5: ethernet-phy@5 {
 			reg = <5>;
